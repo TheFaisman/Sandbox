@@ -1,0 +1,3 @@
+C:/Users/fnaqa/Development/Git_Repos/Sandbox/NinjaCmake_Test/build/CMakeFiles/rebuild_cache.dir
+C:/Users/fnaqa/Development/Git_Repos/Sandbox/NinjaCmake_Test/build/CMakeFiles/test.dir
+C:/Users/fnaqa/Development/Git_Repos/Sandbox/NinjaCmake_Test/build/CMakeFiles/edit_cache.dir
