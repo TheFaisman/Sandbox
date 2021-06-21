@@ -62,17 +62,17 @@ int main()
 
     cout << "\nHere is the sorted dictionary.\n";
 
-    bool is_word_censored = false;
+    bool is_censored = false;
     string censored_string = "*****";
 
     for (int i = 0; i < dictionary.size(); i++) {
         for (int j = 0; j < disliked.size(); j++) {
             if (dictionary[i] == disliked[j]) // Found a forbidden word
-                is_word_censored = true;
+                is_censored = true;
         }
-        if (is_word_censored)
+        if (is_censored)
             dictionary[i] = censored_string;
-        is_word_censored = false;
+        is_censored = false;
     }
 
     PrintVector<string>(dictionary);
