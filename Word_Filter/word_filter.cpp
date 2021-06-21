@@ -13,7 +13,7 @@ int main()
     disliked.push_back("bad");
     disliked.push_back("car");
 
-    cout << "Provide a list of words.\n";
+    cout << "Provide a list of words. Terminate the list with an end of file character\n";
 
     vector<string> dictionary;
     for (string word; cin >> word;) {
@@ -32,13 +32,14 @@ int main()
             if (dictionary[i] == disliked[j]) // Found a forbidden word
                 censored_word = true;
         }
-        if (censored_word) {
-            cout << "*****" << endl;
-        } else if (i == 0 || dictionary[i - 1] != dictionary[i]) { // Ensure no repetition
-
-            cout << dictionary[i] << endl;
+        if (i == 0 || dictionary[i - 1] != dictionary[i]) { // Ensure no repetition
+            if (censored_word)
+                cout << "*****" << endl;
+            else 
+                cout << dictionary[i] << endl;
+            censored_word = false;
         }
-        censored_word = false;
+        
     }
 
     return 0;
