@@ -23,7 +23,8 @@
     In the interest of maintainability and future interest in unique words only, Method 3 will be used.
 */
 
-void PrintVector(vector<string> v) {
+template <class T>
+void PrintVector(vector<T> v) {
     for (int i = 0; i < v.size(); i++) {
         cout << v[i] << endl;
     }
@@ -74,7 +75,7 @@ int main()
         is_word_censored = false;
     }
 
-    PrintVector(dictionary);
+    PrintVector<string>(dictionary);
 
     return 0;
 }
