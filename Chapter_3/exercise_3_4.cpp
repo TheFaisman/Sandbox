@@ -1,4 +1,8 @@
 #include "../std_lib_facilities.h"
+/*
+    This program prompts the user for 2 integer values, and then operates on those integers.
+    The results of the operations are printed to the user.
+*/
 
 int main() {
 
