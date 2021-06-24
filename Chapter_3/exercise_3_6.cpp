@@ -14,32 +14,32 @@ void Swap(T &first, T &second) {
 
 int main() {
 
-    int numbers[3];
+    int input[3];
     cout << "Enter 3 integers: ";
     for (int i = 0; i < 3; i++) {
-        cin >> numbers[i];
+        cin >> input[i];
     }
     
-    if (numbers[0] <= numbers[1] && numbers[0] <= numbers[2]) {
-        cout << numbers[0] << ", ";
-        if (numbers[1] <= numbers[2]) {
-            cout << numbers[1] << ", " << numbers[2];
+    if (input[0] <= input[1] && input[0] <= input[2]) {
+        cout << input[0] << ", ";
+        if (input[1] <= input[2]) {
+            cout << input[1] << ", " << input[2];
         } else {
-            cout << numbers[2] << ", " << numbers[1];
+            cout << input[2] << ", " << input[1];
         }
-    } else if (numbers[1] <= numbers[0] && numbers[1] <= numbers[2]) {
-        cout << numbers[1] << ", ";
-        if (numbers[0] <= numbers[2]) {
-            cout << numbers[0] << ", " << numbers[2];
+    } else if (input[1] <= input[0] && input[1] <= input[2]) {
+        cout << input[1] << ", ";
+        if (input[0] <= input[2]) {
+            cout << input[0] << ", " << input[2];
         } else {
-            cout << numbers[2] << ", " << numbers[0];
+            cout << input[2] << ", " << input[0];
         }
     } else {
-        cout << numbers[2] << ", ";
-        if (numbers[0] <= numbers[1]) {
-            cout << numbers[0] << ", " << numbers[1];
+        cout << input[2] << ", ";
+        if (input[0] <= input[1]) {
+            cout << input[0] << ", " << input[1];
         } else {
-            cout << numbers[1] << ", " << numbers[0];
+            cout << input[1] << ", " << input[0];
         }
     }
 
