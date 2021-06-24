@@ -1,34 +1,21 @@
 #include "../std_lib_facilities.h"
 
 int main() {
-    string input[3];
+    
+    vector<string> input;
     cout << "Enter 3 strings: ";
     for (int i = 0; i < 3; i++) {
-        cin >> input[i];
-    }
-    
-    if (input[0] <= input[1] && input[0] <= input[2]) {
-        cout << input[0] << ", ";
-        if (input[1] <= input[2]) {
-            cout << input[1] << ", " << input[2];
-        } else {
-            cout << input[2] << ", " << input[1];
-        }
-    } else if (input[1] <= input[0] && input[1] <= input[2]) {
-        cout << input[1] << ", ";
-        if (input[0] <= input[2]) {
-            cout << input[0] << ", " << input[2];
-        } else {
-            cout << input[2] << ", " << input[0];
-        }
-    } else {
-        cout << input[2] << ", ";
-        if (input[0] <= input[1]) {
-            cout << input[0] << ", " << input[1];
-        } else {
-            cout << input[1] << ", " << input[0];
-        }
+        string temp_input;
+        cin >> temp_input;
+        input.push_back(temp_input);
     }
 
+    sort(input);
+    
+    for (int i = 0; i < input.size(); i++) {
+        cout << input[i];
+        if (i != 2) { cout << ", "; }
+    }
+    
     return 0;
 }
