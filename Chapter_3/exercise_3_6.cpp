@@ -3,11 +3,7 @@
     This program accepts three integer inputs then outputs them in numerical
     sequence in a comma separated format.
 
-    A swap looks like:
-    numbers[i-1] <=> numbers[i]
-    temp = numbers[i]
-    numbers[i] = numbers[i-1]
-    numbers[i-1] = temp 
+    No iteration is used, there's likely room to improve this program.
 */
 template <class T>
 void Swap(T &first, T &second) {
@@ -24,5 +20,28 @@ int main() {
         cin >> numbers[i];
     }
     
+    if (numbers[0] <= numbers[1] && numbers[0] <= numbers[2]) {
+        cout << numbers[0] << ", ";
+        if (numbers[1] <= numbers[2]) {
+            cout << numbers[1] << ", " << numbers[2];
+        } else {
+            cout << numbers[2] << ", " << numbers[1];
+        }
+    } else if (numbers[1] <= numbers[0] && numbers[1] <= numbers[2]) {
+        cout << numbers[1] << ", ";
+        if (numbers[0] <= numbers[2]) {
+            cout << numbers[0] << ", " << numbers[2];
+        } else {
+            cout << numbers[2] << ", " << numbers[0];
+        }
+    } else {
+        cout << numbers[2] << ", ";
+        if (numbers[0] <= numbers[1]) {
+            cout << numbers[0] << ", " << numbers[1];
+        } else {
+            cout << numbers[1] << ", " << numbers[0];
+        }
+    }
+
     return 0;
 }
